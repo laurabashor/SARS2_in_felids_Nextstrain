@@ -1,0 +1,48 @@
+{
+  "title": "Phylogeny of SARS-CoV-2 in felids",
+  "maintainers": [
+    {"name": "Laura Bashor", "url": "https://github.com/laurabashor"}
+ ],
+  "build_url": "https://github.com/laurabashor/SARS2felids/felidphylogeny",
+  "colorings": [
+    {
+      "key": "Sampling date",
+      "title": "Sampling date",
+      "type": "continuous"
+    },
+    {
+      "key": "host",
+      "title": "host",
+      "type": "categorical"
+    },
+    {
+      "key": "country",
+      "title": "country",
+      "type": "categorical"
+    },
+    {
+      "key": "author",
+      "title": "authors",
+      "type": "categorical"
+    }
+  ],
+  "geo_resolutions": [
+    "country"
+  ],
+  "display_defaults": {
+    "color_by": "date",
+    "map_triplicate": true
+  },
+  "filters": [
+    "virus_type",
+    "date",
+    "host",
+    "country",
+    "author"
+  ],
+  "panels": [
+    "tree",
+    "map",
+    "entropy"
+  ]
+}
