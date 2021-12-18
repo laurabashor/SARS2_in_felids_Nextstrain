@@ -1,6 +1,6 @@
 {
   "meta": {
-    "build_url": "https://github.com/myusername/myrepository/",
+    "build_url": "https://github.com/laurabashor/SARS2felids",
     "colorings": [
       {
         "key": "clade_membership",
@@ -42,37 +42,14 @@
         "type": "categorical"
       },
       {
-        "key": "num_date",
-        "title": "Sampling date",
-        "type": "continuous"
-      },
-      {
         "key": "gt",
         "title": "Genotype",
         "type": "categorical"
       },
       {
-        "key": "location",
-        "scale": [
-          [
-            "Venezia",
-            "#4A8CC2"
-          ],
-          [
-            "Vsevolozhsk",
-            "#71B486"
-          ],
-          [
-            "Barreiras",
-            "#ABBD52"
-          ],
-          [
-            "Brazos County",
-            "#DEA73C"
-          ]
-        ],
-        "title": "Location",
-        "type": "categorical"
+        "key": "num_date",
+        "title": "Sampling date",
+        "type": "continuous"
       },
       {
         "key": "division",
@@ -306,13 +283,8 @@
         "type": "categorical"
       },
       {
-        "key": "S1_mutations",
-        "title": "S1_mutations",
-        "type": "continuous"
-      },
-      {
-        "key": "current_frequency",
-        "title": "current_frequency",
+        "key": "logistic_growth",
+        "title": "logistic_growth",
         "type": "continuous"
       },
       {
@@ -495,8 +467,8 @@
         ]
       },
       {
-        "key": "logistic_growth",
-        "title": "logistic_growth",
+        "key": "S1_mutations",
+        "title": "S1_mutations",
         "type": "continuous"
       },
       {
@@ -505,15 +477,20 @@
         "type": "continuous"
       },
       {
+        "key": "current_frequency",
+        "title": "current_frequency",
+        "type": "continuous"
+      },
+      {
         "key": "emerging_lineage",
         "title": "emerging_lineage",
         "type": "categorical"
       }
     ],
-    "description": "This is the description that appears below your visualization in Auspice. Edit me in `my_profiles/example/description.md`.\n",
+    "description": "This phylogeny shows all publicly available SARS-CoV-2 sequences recovered from domestic cats since the start of the COVID-19 pandemic through December 2021.\n",
     "display_defaults": {
-      "branch_label": "none",
-      "color_by": "division",
+      "branch_label": "clade",
+      "color_by": "num_date",
       "distance_measure": "num_date",
       "geo_resolution": "division",
       "map_triplicate": true
@@ -840,8 +817,8 @@
     ],
     "maintainers": [
       {
-        "name": "My name",
-        "url": "www.myurl.com"
+        "name": "Laura Bashor",
+        "url": "https://github.com/laurabashor/"
       }
     ],
     "panels": [
@@ -1387,7 +1364,7 @@
                             }
                           }
                         ],
-                        "name": "NODE_0000006",
+                        "name": "NODE_0000007",
                         "node_attrs": {
                           "S1_mutations": {
                             "value": 1.0
@@ -1414,10 +1391,10 @@
                           },
                           "num_date": {
                             "confidence": [
-                              2020.4514032120892,
-                              2020.6215486631186
+                              2020.4546770110426,
+                              2020.6273005021822
                             ],
-                            "value": 2020.4941586198831
+                            "value": 2020.4938118890725
                           }
                         }
                       }
@@ -1452,10 +1429,10 @@
                       },
                       "num_date": {
                         "confidence": [
-                          2020.4317740531696,
-                          2020.490096805755
+                          2020.4320697298149,
+                          2020.4902588046698
                         ],
-                        "value": 2020.474010502127
+                        "value": 2020.4731911064482
                       }
                     }
                   },
@@ -1686,10 +1663,10 @@
                           },
                           "num_date": {
                             "confidence": [
-                              2020.318737529819,
-                              2020.5568944985926
+                              2020.3146817847064,
+                              2020.5493729584348
                             ],
-                            "value": 2020.4402313121968
+                            "value": 2020.442654726321
                           }
                         }
                       },
@@ -1698,6 +1675,98 @@
                           "mutations": {}
                         },
                         "children": [
+                          {
+                            "branch_attrs": {
+                              "labels": {
+                                "aa": "ORF1b: D731G; S: L54F; N: P368L"
+                              },
+                              "mutations": {
+                                "N": [
+                                  "P368L"
+                                ],
+                                "ORF1b": [
+                                  "D731G"
+                                ],
+                                "S": [
+                                  "L54F"
+                                ],
+                                "nuc": [
+                                  "G8056A",
+                                  "C13665T",
+                                  "C13860T",
+                                  "A15659G",
+                                  "C18486T",
+                                  "G21724T",
+                                  "T22162C",
+                                  "C29376T"
+                                ]
+                              }
+                            },
+                            "name": "cat/USA/VA-20-037760-004/2020",
+                            "node_attrs": {
+                              "S1_mutations": {
+                                "value": 2.0
+                              },
+                              "age": {
+                                "value": "4"
+                              },
+                              "author": {
+                                "author": "Kerrie M. Franzen, Mary L. Killian, Emily R. Love, Tod P. Stuber, Mia Torchetti, Suelee Robbe-Austerman",
+                                "value": "Kerrie M. Franzen, Mary L. Killian, Emily R. Love, Tod P. Stuber, Mia Torchetti, Suelee Robbe-Austerman"
+                              },
+                              "clade_membership": {
+                                "value": "20A"
+                              },
+                              "country": {
+                                "confidence": {
+                                  "USA": 1.0
+                                },
+                                "entropy": -1.000088900581841e-12,
+                                "value": "USA"
+                              },
+                              "current_frequency": {
+                                "value": 0.0
+                              },
+                              "div": 14,
+                              "division": {
+                                "value": "Virginia"
+                              },
+                              "emerging_lineage": {
+                                "value": "20A"
+                              },
+                              "epiweek": {
+                                "value": "202051"
+                              },
+                              "gisaid_epi_isl": {
+                                "value": "EPI_ISL_3010050"
+                              },
+                              "host": {
+                                "value": "Felis catus"
+                              },
+                              "mutational_fitness": {
+                                "value": 0.36557360000000005
+                              },
+                              "num_date": {
+                                "confidence": [
+                                  2020.9631147540983,
+                                  2020.9631147540983
+                                ],
+                                "value": 2020.9631147540983
+                              },
+                              "originating_lab": {
+                                "value": "Cornell Diagnostic Laboratory"
+                              },
+                              "region": {
+                                "value": "North America"
+                              },
+                              "sex": {
+                                "value": "Male"
+                              },
+                              "submitting_lab": {
+                                "value": "Diagnostic Virology Laboratory, National Veterinary Services Laboratories, USDA1920 Dayton Avenue, Ames, IA 50010, USA"
+                              }
+                            }
+                          },
                           {
                             "branch_attrs": {
                               "labels": {
@@ -1813,101 +1882,9 @@
                                 "value": "Diagnostic Virology Laboratory, National Veterinary Services Laboratories, USDA1920 Dayton Avenue, Ames, IA 50010, USA"
                               }
                             }
-                          },
-                          {
-                            "branch_attrs": {
-                              "labels": {
-                                "aa": "ORF1b: D731G; S: L54F; N: P368L"
-                              },
-                              "mutations": {
-                                "N": [
-                                  "P368L"
-                                ],
-                                "ORF1b": [
-                                  "D731G"
-                                ],
-                                "S": [
-                                  "L54F"
-                                ],
-                                "nuc": [
-                                  "G8056A",
-                                  "C13665T",
-                                  "C13860T",
-                                  "A15659G",
-                                  "C18486T",
-                                  "G21724T",
-                                  "T22162C",
-                                  "C29376T"
-                                ]
-                              }
-                            },
-                            "name": "cat/USA/VA-20-037760-004/2020",
-                            "node_attrs": {
-                              "S1_mutations": {
-                                "value": 2.0
-                              },
-                              "age": {
-                                "value": "4"
-                              },
-                              "author": {
-                                "author": "Kerrie M. Franzen, Mary L. Killian, Emily R. Love, Tod P. Stuber, Mia Torchetti, Suelee Robbe-Austerman",
-                                "value": "Kerrie M. Franzen, Mary L. Killian, Emily R. Love, Tod P. Stuber, Mia Torchetti, Suelee Robbe-Austerman"
-                              },
-                              "clade_membership": {
-                                "value": "20A"
-                              },
-                              "country": {
-                                "confidence": {
-                                  "USA": 1.0
-                                },
-                                "entropy": -1.000088900581841e-12,
-                                "value": "USA"
-                              },
-                              "current_frequency": {
-                                "value": 0.0
-                              },
-                              "div": 14,
-                              "division": {
-                                "value": "Virginia"
-                              },
-                              "emerging_lineage": {
-                                "value": "20A"
-                              },
-                              "epiweek": {
-                                "value": "202051"
-                              },
-                              "gisaid_epi_isl": {
-                                "value": "EPI_ISL_3010050"
-                              },
-                              "host": {
-                                "value": "Felis catus"
-                              },
-                              "mutational_fitness": {
-                                "value": 0.36557360000000005
-                              },
-                              "num_date": {
-                                "confidence": [
-                                  2020.9631147540983,
-                                  2020.9631147540983
-                                ],
-                                "value": 2020.9631147540983
-                              },
-                              "originating_lab": {
-                                "value": "Cornell Diagnostic Laboratory"
-                              },
-                              "region": {
-                                "value": "North America"
-                              },
-                              "sex": {
-                                "value": "Male"
-                              },
-                              "submitting_lab": {
-                                "value": "Diagnostic Virology Laboratory, National Veterinary Services Laboratories, USDA1920 Dayton Avenue, Ames, IA 50010, USA"
-                              }
-                            }
                           }
                         ],
-                        "name": "NODE_0000007",
+                        "name": "NODE_0000009",
                         "node_attrs": {
                           "S1_mutations": {
                             "value": 1.0
@@ -1934,15 +1911,15 @@
                           },
                           "num_date": {
                             "confidence": [
-                              2020.2495259274149,
-                              2020.6479226330807
+                              2020.2393616692182,
+                              2020.6410281910312
                             ],
-                            "value": 2020.492591489366
+                            "value": 2020.480243931008
                           }
                         }
                       }
                     ],
-                    "name": "NODE_0000005",
+                    "name": "NODE_0000006",
                     "node_attrs": {
                       "S1_mutations": {
                         "value": 1.0
@@ -1972,10 +1949,10 @@
                       },
                       "num_date": {
                         "confidence": [
-                          2020.2675693460408,
-                          2020.5406887902225
+                          2020.2592875447979,
+                          2020.5368697476863
                         ],
-                        "value": 2020.3784677270417
+                        "value": 2020.375507530414
                       }
                     }
                   }
@@ -2010,10 +1987,10 @@
                   },
                   "num_date": {
                     "confidence": [
-                      2020.2626650689583,
-                      2020.409468850624
+                      2020.2598531248466,
+                      2020.4064019299637
                     ],
-                    "value": 2020.3212277462142
+                    "value": 2020.3274897256338
                   }
                 }
               }
@@ -2048,10 +2025,10 @@
               },
               "num_date": {
                 "confidence": [
-                  2020.192383981685,
-                  2020.22659898603
+                  2020.1929199898336,
+                  2020.2274773638005
                 ],
-                "value": 2020.2080558945324
+                "value": 2020.2121610332517
               }
             }
           },
@@ -2305,7 +2282,7 @@
                     }
                   }
                 ],
-                "name": "NODE_0000003",
+                "name": "NODE_0000011",
                 "node_attrs": {
                   "S1_mutations": {
                     "value": 1.0
@@ -2333,7 +2310,7 @@
                   },
                   "num_date": {
                     "confidence": [
-                      2020.3414256532733,
+                      2020.3423728462399,
                       2020.3674863387978
                     ],
                     "value": 2020.3674863387978
@@ -2697,7 +2674,7 @@
                         }
                       }
                     ],
-                    "name": "NODE_0000014",
+                    "name": "NODE_0000005",
                     "node_attrs": {
                       "S1_mutations": {
                         "value": 7.0
@@ -2725,15 +2702,15 @@
                       },
                       "num_date": {
                         "confidence": [
-                          2021.166317547288,
-                          2021.2303835363546
+                          2021.1665232896323,
+                          2021.230377322622
                         ],
-                        "value": 2021.2183637666017
+                        "value": 2021.218344327561
                       }
                     }
                   }
                 ],
-                "name": "NODE_0000013",
+                "name": "NODE_0000004",
                 "node_attrs": {
                   "S1_mutations": {
                     "value": 7.0
@@ -2763,10 +2740,10 @@
                   },
                   "num_date": {
                     "confidence": [
-                      2020.849364513939,
-                      2021.1144653213275
+                      2020.844512487063,
+                      2021.1097928061074
                     ],
-                    "value": 2020.9903949272125
+                    "value": 2021.009523142025
                   }
                 }
               },
@@ -3210,7 +3187,7 @@
                             }
                           }
                         ],
-                        "name": "NODE_0000018",
+                        "name": "NODE_0000015",
                         "node_attrs": {
                           "S1_mutations": {
                             "value": 6.0
@@ -3240,10 +3217,10 @@
                           },
                           "num_date": {
                             "confidence": [
-                              2020.7810135278473,
-                              2021.102917741847
+                              2020.805662369897,
+                              2021.1087479876664
                             ],
-                            "value": 2021.0094080875194
+                            "value": 2021.0087176229745
                           }
                         }
                       },
@@ -3732,7 +3709,7 @@
                                     }
                                   }
                                 ],
-                                "name": "NODE_0000022",
+                                "name": "NODE_0000019",
                                 "node_attrs": {
                                   "S1_mutations": {
                                     "value": 6.0
@@ -3762,15 +3739,15 @@
                                   },
                                   "num_date": {
                                     "confidence": [
-                                      2021.0132355513397,
-                                      2021.1130809700066
+                                      2021.0130445584075,
+                                      2021.1134384488075
                                     ],
-                                    "value": 2021.092724906839
+                                    "value": 2021.0924387677283
                                   }
                                 }
                               }
                             ],
-                            "name": "NODE_0000021",
+                            "name": "NODE_0000018",
                             "node_attrs": {
                               "S1_mutations": {
                                 "value": 6.0
@@ -3800,15 +3777,15 @@
                               },
                               "num_date": {
                                 "confidence": [
-                                  2020.8807930162104,
-                                  2021.1028022421037
+                                  2020.8740838226536,
+                                  2021.0959374700662
                                 ],
-                                "value": 2021.0137559913362
+                                "value": 2021.0330476343602
                               }
                             }
                           }
                         ],
-                        "name": "NODE_0000019",
+                        "name": "NODE_0000016",
                         "node_attrs": {
                           "S1_mutations": {
                             "value": 6.0
@@ -3838,15 +3815,15 @@
                           },
                           "num_date": {
                             "confidence": [
-                              2020.7775200736935,
-                              2021.0920572076298
+                              2020.7765527866436,
+                              2021.0964304401277
                             ],
-                            "value": 2020.9562561897187
+                            "value": 2020.9569081647376
                           }
                         }
                       }
                     ],
-                    "name": "NODE_0000016",
+                    "name": "NODE_0000013",
                     "node_attrs": {
                       "S1_mutations": {
                         "value": 6.0
@@ -3876,15 +3853,15 @@
                       },
                       "num_date": {
                         "confidence": [
-                          2020.7434440118254,
-                          2021.0808598730034
+                          2020.7449839559727,
+                          2021.0851270837265
                         ],
-                        "value": 2020.9496886487473
+                        "value": 2020.949292665563
                       }
                     }
                   }
                 ],
-                "name": "NODE_0000015",
+                "name": "NODE_0000012",
                 "node_attrs": {
                   "S1_mutations": {
                     "value": 3.0
@@ -3914,10 +3891,10 @@
                   },
                   "num_date": {
                     "confidence": [
-                      2020.6000280379415,
-                      2021.0187836884807
+                      2020.599044836167,
+                      2021.010139836467
                     ],
-                    "value": 2020.8189090689928
+                    "value": 2020.828655312973
                   }
                 }
               },
@@ -4212,7 +4189,7 @@
                         }
                       }
                     ],
-                    "name": "NODE_0000009",
+                    "name": "NODE_0000003",
                     "node_attrs": {
                       "S1_mutations": {
                         "value": 1.0
@@ -4242,10 +4219,10 @@
                       },
                       "num_date": {
                         "confidence": [
-                          2020.2936314121087,
-                          2020.6648148283873
+                          2020.2783156525688,
+                          2020.6517757264526
                         ],
-                        "value": 2020.40316212728
+                        "value": 2020.426186387989
                       }
                     }
                   },
@@ -4731,7 +4708,7 @@
                                         }
                                       }
                                     ],
-                                    "name": "NODE_0000011",
+                                    "name": "NODE_0000023",
                                     "node_attrs": {
                                       "S1_mutations": {
                                         "value": 3.0
@@ -4758,7 +4735,7 @@
                                       },
                                       "num_date": {
                                         "confidence": [
-                                          2020.8486923202101,
+                                          2020.84824331575,
                                           2020.8784153005465
                                         ],
                                         "value": 2020.8784153005465
@@ -4766,7 +4743,7 @@
                                     }
                                   }
                                 ],
-                                "name": "NODE_0000010",
+                                "name": "NODE_0000022",
                                 "node_attrs": {
                                   "S1_mutations": {
                                     "value": 3.0
@@ -4796,10 +4773,10 @@
                                   },
                                   "num_date": {
                                     "confidence": [
-                                      2020.6462201067816,
-                                      2020.8345873134087
+                                      2020.64564546453,
+                                      2020.8349706964077
                                     ],
-                                    "value": 2020.7913212178241
+                                    "value": 2020.7911925683031
                                   }
                                 }
                               },
@@ -5104,7 +5081,7 @@
                                         }
                                       }
                                     ],
-                                    "name": "NODE_0000001",
+                                    "name": "NODE_0000008",
                                     "node_attrs": {
                                       "S1_mutations": {
                                         "value": 1.0
@@ -5134,15 +5111,15 @@
                                       },
                                       "num_date": {
                                         "confidence": [
-                                          2020.3482775426885,
-                                          2020.6948707481454
+                                          2020.356692523762,
+                                          2020.69834240972
                                         ],
-                                        "value": 2020.612893365341
+                                        "value": 2020.5971825804384
                                       }
                                     }
                                   }
                                 ],
-                                "name": "NODE_0000029",
+                                "name": "NODE_0000028",
                                 "node_attrs": {
                                   "S1_mutations": {
                                     "value": 1.0
@@ -5172,10 +5149,10 @@
                                   },
                                   "num_date": {
                                     "confidence": [
-                                      2020.2885754942067,
-                                      2020.6427758552104
+                                      2020.28767983299,
+                                      2020.6492527160055
                                     ],
-                                    "value": 2020.5398759114623
+                                    "value": 2020.5387377838772
                                   }
                                 }
                               }
@@ -5210,15 +5187,15 @@
                               },
                               "num_date": {
                                 "confidence": [
-                                  2020.2867236027066,
-                                  2020.6292698963446
+                                  2020.2856444159356,
+                                  2020.6360065762417
                                 ],
-                                "value": 2020.4996450964502
+                                "value": 2020.501500618914
                               }
                             }
                           }
                         ],
-                        "name": "NODE_0000020",
+                        "name": "NODE_0000021",
                         "node_attrs": {
                           "S1_mutations": {
                             "value": 1.0
@@ -5248,10 +5225,10 @@
                           },
                           "num_date": {
                             "confidence": [
-                              2020.274992942599,
-                              2020.5815015270878
+                              2020.2791537273458,
+                              2020.5927621886271
                             ],
-                            "value": 2020.4789664650139
+                            "value": 2020.4734271973305
                           }
                         }
                       }
@@ -5286,15 +5263,15 @@
                       },
                       "num_date": {
                         "confidence": [
-                          2020.2769564600346,
-                          2020.5867188051998
+                          2020.2729974042873,
+                          2020.5921530475498
                         ],
-                        "value": 2020.4124110310213
+                        "value": 2020.4330684644106
                       }
                     }
                   }
                 ],
-                "name": "NODE_0000030",
+                "name": "NODE_0000029",
                 "node_attrs": {
                   "S1_mutations": {
                     "value": 1.0
@@ -5324,15 +5301,15 @@
                   },
                   "num_date": {
                     "confidence": [
-                      2020.249901542104,
-                      2020.6435238131035
+                      2020.248772389973,
+                      2020.635352633513
                     ],
-                    "value": 2020.3219002183039
+                    "value": 2020.3241358309667
                   }
                 }
               }
             ],
-            "name": "NODE_0000023",
+            "name": "NODE_0000020",
             "node_attrs": {
               "S1_mutations": {
                 "value": 1.0
@@ -5362,10 +5339,10 @@
               },
               "num_date": {
                 "confidence": [
-                  2020.255293250965,
-                  2020.329475549774
+                  2020.258661608844,
+                  2020.322910145061
                 ],
-                "value": 2020.2632994473825
+                "value": 2020.2627433090756
               }
             }
           },
@@ -5632,10 +5609,10 @@
                       },
                       "num_date": {
                         "confidence": [
-                          2020.427607922052,
-                          2020.7008103390285
+                          2020.4065097479486,
+                          2020.6924691818515
                         ],
-                        "value": 2020.5708288371688
+                        "value": 2020.5733996643964
                       }
                     }
                   },
@@ -6214,7 +6191,7 @@
                                       },
                                       "num_date": {
                                         "confidence": [
-                                          2021.7033527754147,
+                                          2021.703340213074,
                                           2021.7438356164384
                                         ],
                                         "value": 2021.723608926485
@@ -6222,7 +6199,7 @@
                                     }
                                   }
                                 ],
-                                "name": "NODE_0000047",
+                                "name": "NODE_0000044",
                                 "node_attrs": {
                                   "S1_mutations": {
                                     "value": 8.0
@@ -6251,7 +6228,7 @@
                                   },
                                   "num_date": {
                                     "confidence": [
-                                      2021.6654477201005,
+                                      2021.6657192452597,
                                       2021.7246575342465
                                     ],
                                     "value": 2021.723608926485
@@ -6259,7 +6236,7 @@
                                 }
                               }
                             ],
-                            "name": "NODE_0000028",
+                            "name": "NODE_0000027",
                             "node_attrs": {
                               "S1_mutations": {
                                 "value": 8.0
@@ -6289,7 +6266,7 @@
                               },
                               "num_date": {
                                 "confidence": [
-                                  2021.6112669170088,
+                                  2021.6111039502262,
                                   2021.7215519749643
                                 ],
                                 "value": 2021.6875752693318
@@ -6297,7 +6274,7 @@
                             }
                           }
                         ],
-                        "name": "NODE_0000027",
+                        "name": "NODE_0000026",
                         "node_attrs": {
                           "S1_mutations": {
                             "value": 7.0
@@ -6327,10 +6304,10 @@
                           },
                           "num_date": {
                             "confidence": [
-                              2020.740133584757,
-                              2021.382396006602
+                              2020.7408147177696,
+                              2021.378746037398
                             ],
-                            "value": 2021.0520602572497
+                            "value": 2021.0513314337402
                           }
                         }
                       },
@@ -6465,112 +6442,6 @@
                               },
                               "submitting_lab": {
                                 "value": "Sciensano - Animal diseases"
-                              }
-                            }
-                          },
-                          {
-                            "branch_attrs": {
-                              "labels": {
-                                "aa": "ORF1a: T746I, H2125Y, A2554V, V3197M; ORF1b: F183V, H1087Y; S: Y200H, T240I; ORF8: A51V, L60F"
-                              },
-                              "mutations": {
-                                "ORF1a": [
-                                  "T746I",
-                                  "H2125Y",
-                                  "A2554V",
-                                  "V3197M"
-                                ],
-                                "ORF1b": [
-                                  "F183V",
-                                  "H1087Y"
-                                ],
-                                "ORF8": [
-                                  "A51V",
-                                  "L60F"
-                                ],
-                                "S": [
-                                  "Y200H",
-                                  "T240I"
-                                ],
-                                "nuc": [
-                                  "C2502T",
-                                  "C6040T",
-                                  "C6638T",
-                                  "C7926T",
-                                  "G9854A",
-                                  "T14014G",
-                                  "C16726T",
-                                  "T22160C",
-                                  "C22281T",
-                                  "C22450T",
-                                  "C28045T",
-                                  "G28073T",
-                                  "A29700G"
-                                ]
-                              }
-                            },
-                            "name": "cat/USA/IN-21-032644-001/2021",
-                            "node_attrs": {
-                              "S1_mutations": {
-                                "value": 10.0
-                              },
-                              "age": {
-                                "value": "7 years"
-                              },
-                              "author": {
-                                "author": "Kerrie M. Franzen, Mary L. Killian, Emily R. Love, Tod P. Stuber, Mia Torchetti, Suelee Robbe-Austerman",
-                                "value": "Kerrie M. Franzen, Mary L. Killian, Emily R. Love, Tod P. Stuber, Mia Torchetti, Suelee Robbe-Austerman"
-                              },
-                              "clade_membership": {
-                                "value": "21J (Delta)"
-                              },
-                              "country": {
-                                "confidence": {
-                                  "USA": 0.9999999999999999
-                                },
-                                "entropy": -9.99866855976916e-13,
-                                "value": "USA"
-                              },
-                              "current_frequency": {
-                                "value": 0.52221
-                              },
-                              "div": 44,
-                              "division": {
-                                "value": "Indiana"
-                              },
-                              "emerging_lineage": {
-                                "value": "21J (Delta)"
-                              },
-                              "epiweek": {
-                                "value": "202142"
-                              },
-                              "gisaid_epi_isl": {
-                                "value": "EPI_ISL_6088086"
-                              },
-                              "host": {
-                                "value": "Felis catus"
-                              },
-                              "mutational_fitness": {
-                                "value": 1.1871714389999999
-                              },
-                              "num_date": {
-                                "confidence": [
-                                  2021.7931506849316,
-                                  2021.7931506849316
-                                ],
-                                "value": 2021.7931506849316
-                              },
-                              "originating_lab": {
-                                "value": "IDEXX Reference Laboratories"
-                              },
-                              "region": {
-                                "value": "North America"
-                              },
-                              "sex": {
-                                "value": "Male"
-                              },
-                              "submitting_lab": {
-                                "value": "Diagnostic Virology Laboratory, National Veterinary Services Laboratories, USDA1920 Dayton Avenue, Ames, IA 50010, USA"
                               }
                             }
                           },
@@ -6745,6 +6616,112 @@
                                   2021.5931506849315
                                 ],
                                 "value": 2021.5931506849315
+                              },
+                              "originating_lab": {
+                                "value": "IDEXX Reference Laboratories"
+                              },
+                              "region": {
+                                "value": "North America"
+                              },
+                              "sex": {
+                                "value": "Male"
+                              },
+                              "submitting_lab": {
+                                "value": "Diagnostic Virology Laboratory, National Veterinary Services Laboratories, USDA1920 Dayton Avenue, Ames, IA 50010, USA"
+                              }
+                            }
+                          },
+                          {
+                            "branch_attrs": {
+                              "labels": {
+                                "aa": "ORF1a: T746I, H2125Y, A2554V, V3197M; ORF1b: F183V, H1087Y; S: Y200H, T240I; ORF8: A51V, L60F"
+                              },
+                              "mutations": {
+                                "ORF1a": [
+                                  "T746I",
+                                  "H2125Y",
+                                  "A2554V",
+                                  "V3197M"
+                                ],
+                                "ORF1b": [
+                                  "F183V",
+                                  "H1087Y"
+                                ],
+                                "ORF8": [
+                                  "A51V",
+                                  "L60F"
+                                ],
+                                "S": [
+                                  "Y200H",
+                                  "T240I"
+                                ],
+                                "nuc": [
+                                  "C2502T",
+                                  "C6040T",
+                                  "C6638T",
+                                  "C7926T",
+                                  "G9854A",
+                                  "T14014G",
+                                  "C16726T",
+                                  "T22160C",
+                                  "C22281T",
+                                  "C22450T",
+                                  "C28045T",
+                                  "G28073T",
+                                  "A29700G"
+                                ]
+                              }
+                            },
+                            "name": "cat/USA/IN-21-032644-001/2021",
+                            "node_attrs": {
+                              "S1_mutations": {
+                                "value": 10.0
+                              },
+                              "age": {
+                                "value": "7 years"
+                              },
+                              "author": {
+                                "author": "Kerrie M. Franzen, Mary L. Killian, Emily R. Love, Tod P. Stuber, Mia Torchetti, Suelee Robbe-Austerman",
+                                "value": "Kerrie M. Franzen, Mary L. Killian, Emily R. Love, Tod P. Stuber, Mia Torchetti, Suelee Robbe-Austerman"
+                              },
+                              "clade_membership": {
+                                "value": "21J (Delta)"
+                              },
+                              "country": {
+                                "confidence": {
+                                  "USA": 0.9999999999999999
+                                },
+                                "entropy": -9.99866855976916e-13,
+                                "value": "USA"
+                              },
+                              "current_frequency": {
+                                "value": 0.52221
+                              },
+                              "div": 44,
+                              "division": {
+                                "value": "Indiana"
+                              },
+                              "emerging_lineage": {
+                                "value": "21J (Delta)"
+                              },
+                              "epiweek": {
+                                "value": "202142"
+                              },
+                              "gisaid_epi_isl": {
+                                "value": "EPI_ISL_6088086"
+                              },
+                              "host": {
+                                "value": "Felis catus"
+                              },
+                              "mutational_fitness": {
+                                "value": 1.1871714389999999
+                              },
+                              "num_date": {
+                                "confidence": [
+                                  2021.7931506849316,
+                                  2021.7931506849316
+                                ],
+                                "value": 2021.7931506849316
                               },
                               "originating_lab": {
                                 "value": "IDEXX Reference Laboratories"
@@ -7027,7 +7004,7 @@
                                     }
                                   }
                                 ],
-                                "name": "NODE_0000036",
+                                "name": "NODE_0000035",
                                 "node_attrs": {
                                   "S1_mutations": {
                                     "value": 8.0
@@ -7054,15 +7031,15 @@
                                   },
                                   "num_date": {
                                     "confidence": [
-                                      2021.2649547848948,
-                                      2021.637271582445
+                                      2021.2741341273686,
+                                      2021.6368664624736
                                     ],
-                                    "value": 2021.5695780790854
+                                    "value": 2021.569249573126
                                   }
                                 }
                               }
                             ],
-                            "name": "NODE_0000035",
+                            "name": "NODE_0000034",
                             "node_attrs": {
                               "S1_mutations": {
                                 "value": 8.0
@@ -7089,15 +7066,15 @@
                               },
                               "num_date": {
                                 "confidence": [
-                                  2021.1564753228981,
-                                  2021.6259510971106
+                                  2021.167409294578,
+                                  2021.6217416130457
                                 ],
-                                "value": 2021.4906890097916
+                                "value": 2021.4921403698463
                               }
                             }
                           }
                         ],
-                        "name": "NODE_0000031",
+                        "name": "NODE_0000030",
                         "node_attrs": {
                           "S1_mutations": {
                             "value": 8.0
@@ -7124,15 +7101,15 @@
                           },
                           "num_date": {
                             "confidence": [
-                              2020.9346084608962,
-                              2021.4204579762018
+                              2020.9372490036606,
+                              2021.4166372426355
                             ],
-                            "value": 2021.2287478048124
+                            "value": 2021.2282052478747
                           }
                         }
                       }
                     ],
-                    "name": "NODE_0000026",
+                    "name": "NODE_0000025",
                     "node_attrs": {
                       "S1_mutations": {
                         "value": 7.0
@@ -7162,15 +7139,15 @@
                       },
                       "num_date": {
                         "confidence": [
-                          2020.5294247157221,
-                          2021.1997076243747
+                          2020.5415662454463,
+                          2021.2005329403346
                         ],
-                        "value": 2020.8766675860877
+                        "value": 2020.8707653062245
                       }
                     }
                   }
                 ],
-                "name": "NODE_0000038",
+                "name": "NODE_0000037",
                 "node_attrs": {
                   "S1_mutations": {
                     "value": 1.0
@@ -7200,10 +7177,10 @@
                   },
                   "num_date": {
                     "confidence": [
-                      2020.1542389393537,
-                      2020.466044232992
+                      2020.151415085011,
+                      2020.40033197963
                     ],
-                    "value": 2020.321098079791
+                    "value": 2020.3233950083309
                   }
                 }
               },
@@ -7550,10 +7527,10 @@
                           },
                           "num_date": {
                             "confidence": [
-                              2020.338421029074,
-                              2020.5627975780976
+                              2020.3321020504056,
+                              2020.5603024588115
                             ],
-                            "value": 2020.4785802790489
+                            "value": 2020.4796595951964
                           }
                         }
                       },
@@ -7804,10 +7781,10 @@
                           },
                           "num_date": {
                             "confidence": [
-                              2020.6807364960564,
-                              2020.924444657578
+                              2020.6674167462995,
+                              2020.912829563479
                             ],
-                            "value": 2020.8066404132328
+                            "value": 2020.806411418264
                           }
                         }
                       }
@@ -7842,10 +7819,10 @@
                       },
                       "num_date": {
                         "confidence": [
-                          2020.2868737801045,
-                          2020.514697443694
+                          2020.2644912397645,
+                          2020.5060471667057
                         ],
-                        "value": 2020.371702944885
+                        "value": 2020.3781275302194
                       }
                     }
                   },
@@ -7866,88 +7843,6 @@
                       }
                     },
                     "children": [
-                      {
-                        "branch_attrs": {
-                          "labels": {
-                            "aa": "ORF1a: L92F"
-                          },
-                          "mutations": {
-                            "ORF1a": [
-                              "L92F"
-                            ],
-                            "nuc": [
-                              "C539T",
-                              "C2462T",
-                              "C4795T",
-                              "C14178T"
-                            ]
-                          }
-                        },
-                        "name": "cat/USA/MN-20-014543-001/2020",
-                        "node_attrs": {
-                          "S1_mutations": {
-                            "value": 1.0
-                          },
-                          "age": {
-                            "value": "3"
-                          },
-                          "author": {
-                            "author": "Kerrie M. Franzen, Mary L. Killian, Emily R. Love, Tod P. Stuber, Mia Torchetti, Suelee Robbe-Austerman",
-                            "value": "Kerrie M. Franzen, Mary L. Killian, Emily R. Love, Tod P. Stuber, Mia Torchetti, Suelee Robbe-Austerman"
-                          },
-                          "clade_membership": {
-                            "value": "20C"
-                          },
-                          "country": {
-                            "confidence": {
-                              "USA": 1.0
-                            },
-                            "entropy": -1.000088900581841e-12,
-                            "value": "USA"
-                          },
-                          "current_frequency": {
-                            "value": 0.0
-                          },
-                          "div": 10,
-                          "division": {
-                            "value": "Minnesota"
-                          },
-                          "emerging_lineage": {
-                            "value": "20C"
-                          },
-                          "epiweek": {
-                            "value": "202021"
-                          },
-                          "gisaid_epi_isl": {
-                            "value": "EPI_ISL_3152902"
-                          },
-                          "host": {
-                            "value": "Felis catus"
-                          },
-                          "mutational_fitness": {
-                            "value": 0.30580162
-                          },
-                          "num_date": {
-                            "confidence": [
-                              2020.3838797814208,
-                              2020.3838797814208
-                            ],
-                            "value": 2020.3838797814208
-                          },
-                          "originating_lab": {
-                            "value": "IDEXX Reference Laboratories"
-                          },
-                          "region": {
-                            "value": "North America"
-                          },
-                          "sex": {
-                            "value": "Female"
-                          },
-                          "submitting_lab": {
-                            "value": "Diagnostic Virology Laboratory, National Veterinary Services Laboratories, USDA1920 Dayton Avenue, Ames, IA 50010, USA"
-                          }
-                        }
-                      },
                       {
                         "branch_attrs": {
                           "labels": {
@@ -8038,6 +7933,88 @@
                           },
                           "sex": {
                             "value": "Male"
+                          },
+                          "submitting_lab": {
+                            "value": "Diagnostic Virology Laboratory, National Veterinary Services Laboratories, USDA1920 Dayton Avenue, Ames, IA 50010, USA"
+                          }
+                        }
+                      },
+                      {
+                        "branch_attrs": {
+                          "labels": {
+                            "aa": "ORF1a: L92F"
+                          },
+                          "mutations": {
+                            "ORF1a": [
+                              "L92F"
+                            ],
+                            "nuc": [
+                              "C539T",
+                              "C2462T",
+                              "C4795T",
+                              "C14178T"
+                            ]
+                          }
+                        },
+                        "name": "cat/USA/MN-20-014543-001/2020",
+                        "node_attrs": {
+                          "S1_mutations": {
+                            "value": 1.0
+                          },
+                          "age": {
+                            "value": "3"
+                          },
+                          "author": {
+                            "author": "Kerrie M. Franzen, Mary L. Killian, Emily R. Love, Tod P. Stuber, Mia Torchetti, Suelee Robbe-Austerman",
+                            "value": "Kerrie M. Franzen, Mary L. Killian, Emily R. Love, Tod P. Stuber, Mia Torchetti, Suelee Robbe-Austerman"
+                          },
+                          "clade_membership": {
+                            "value": "20C"
+                          },
+                          "country": {
+                            "confidence": {
+                              "USA": 1.0
+                            },
+                            "entropy": -1.000088900581841e-12,
+                            "value": "USA"
+                          },
+                          "current_frequency": {
+                            "value": 0.0
+                          },
+                          "div": 10,
+                          "division": {
+                            "value": "Minnesota"
+                          },
+                          "emerging_lineage": {
+                            "value": "20C"
+                          },
+                          "epiweek": {
+                            "value": "202021"
+                          },
+                          "gisaid_epi_isl": {
+                            "value": "EPI_ISL_3152902"
+                          },
+                          "host": {
+                            "value": "Felis catus"
+                          },
+                          "mutational_fitness": {
+                            "value": 0.30580162
+                          },
+                          "num_date": {
+                            "confidence": [
+                              2020.3838797814208,
+                              2020.3838797814208
+                            ],
+                            "value": 2020.3838797814208
+                          },
+                          "originating_lab": {
+                            "value": "IDEXX Reference Laboratories"
+                          },
+                          "region": {
+                            "value": "North America"
+                          },
+                          "sex": {
+                            "value": "Female"
                           },
                           "submitting_lab": {
                             "value": "Diagnostic Virology Laboratory, National Veterinary Services Laboratories, USDA1920 Dayton Avenue, Ames, IA 50010, USA"
@@ -8342,7 +8319,7 @@
                                 }
                               }
                             ],
-                            "name": "NODE_0000063",
+                            "name": "NODE_0000061",
                             "node_attrs": {
                               "S1_mutations": {
                                 "value": 1.0
@@ -8369,15 +8346,15 @@
                               },
                               "num_date": {
                                 "confidence": [
-                                  2020.3361144616083,
-                                  2020.5378138384895
+                                  2020.3186512427606,
+                                  2020.5320984202085
                                 ],
-                                "value": 2020.4378324519278
+                                "value": 2020.4339105082213
                               }
                             }
                           }
                         ],
-                        "name": "NODE_0000062",
+                        "name": "NODE_0000060",
                         "node_attrs": {
                           "S1_mutations": {
                             "value": 1.0
@@ -8404,10 +8381,10 @@
                           },
                           "num_date": {
                             "confidence": [
-                              2020.298813480161,
-                              2020.4765828161044
+                              2020.2910576756558,
+                              2020.4751315901174
                             ],
-                            "value": 2020.3758469408367
+                            "value": 2020.3799689036364
                           }
                         }
                       },
@@ -8738,7 +8715,7 @@
                                     }
                                   }
                                 ],
-                                "name": "NODE_0000060",
+                                "name": "NODE_0000059",
                                 "node_attrs": {
                                   "S1_mutations": {
                                     "value": 3.0
@@ -8765,15 +8742,15 @@
                                   },
                                   "num_date": {
                                     "confidence": [
-                                      2020.7965471109098,
-                                      2021.013687667683
+                                      2020.7970737579153,
+                                      2021.0363309014233
                                     ],
-                                    "value": 2020.9561737309655
+                                    "value": 2020.9563638543164
                                   }
                                 }
                               }
                             ],
-                            "name": "NODE_0000059",
+                            "name": "NODE_0000058",
                             "node_attrs": {
                               "S1_mutations": {
                                 "value": 1.0
@@ -8800,10 +8777,10 @@
                               },
                               "num_date": {
                                 "confidence": [
-                                  2020.2689843746812,
-                                  2020.6363230429101
+                                  2020.2744161147666,
+                                  2020.638093192429
                                 ],
-                                "value": 2020.4947244110701
+                                "value": 2020.4823309711433
                               }
                             }
                           },
@@ -9194,7 +9171,7 @@
                                         }
                                       }
                                     ],
-                                    "name": "NODE_0000055",
+                                    "name": "NODE_0000064",
                                     "node_attrs": {
                                       "S1_mutations": {
                                         "value": 1.0
@@ -9221,7 +9198,7 @@
                                       },
                                       "num_date": {
                                         "confidence": [
-                                          2020.7567476539866,
+                                          2020.7565208967012,
                                           2020.8073770491803
                                         ],
                                         "value": 2020.8073770491803
@@ -9229,7 +9206,7 @@
                                     }
                                   }
                                 ],
-                                "name": "NODE_0000054",
+                                "name": "NODE_0000063",
                                 "node_attrs": {
                                   "S1_mutations": {
                                     "value": 1.0
@@ -9256,7 +9233,7 @@
                                   },
                                   "num_date": {
                                     "confidence": [
-                                      2020.5925643055023,
+                                      2020.592686665731,
                                       2020.6379781420765
                                     ],
                                     "value": 2020.6379781420765
@@ -9264,7 +9241,7 @@
                                 }
                               }
                             ],
-                            "name": "NODE_0000061",
+                            "name": "NODE_0000057",
                             "node_attrs": {
                               "S1_mutations": {
                                 "value": 1.0
@@ -9291,15 +9268,15 @@
                               },
                               "num_date": {
                                 "confidence": [
-                                  2020.2648474504804,
-                                  2020.5873960130104
+                                  2020.2518509917472,
+                                  2020.5518372797271
                                 ],
-                                "value": 2020.411319727301
+                                "value": 2020.432642675982
                               }
                             }
                           }
                         ],
-                        "name": "NODE_0000056",
+                        "name": "NODE_0000054",
                         "node_attrs": {
                           "S1_mutations": {
                             "value": 1.0
@@ -9326,10 +9303,10 @@
                           },
                           "num_date": {
                             "confidence": [
-                              2020.2629259023097,
-                              2020.5786541348527
+                              2020.249438345076,
+                              2020.5524102158336
                             ],
-                            "value": 2020.3767932259143
+                            "value": 2020.3704221213306
                           }
                         }
                       },
@@ -9818,10 +9795,10 @@
                                       },
                                       "num_date": {
                                         "confidence": [
-                                          2020.4802703916,
-                                          2020.7502358032975
+                                          2020.4785548477128,
+                                          2020.7511044537341
                                         ],
-                                        "value": 2020.6130332878563
+                                        "value": 2020.6047090178536
                                       }
                                     }
                                   },
@@ -10217,10 +10194,10 @@
                                           },
                                           "num_date": {
                                             "confidence": [
-                                              2020.9172844378484,
-                                              2021.091943124767
+                                              2020.8992685921564,
+                                              2021.090875147995
                                             ],
-                                            "value": 2021.0462275698685
+                                            "value": 2021.0475672135744
                                           }
                                         }
                                       }
@@ -10252,15 +10229,15 @@
                                       },
                                       "num_date": {
                                         "confidence": [
-                                          2020.5627800025331,
+                                          2020.561240576745,
                                           2020.6161202185792
                                         ],
-                                        "value": 2020.61421075951
+                                        "value": 2020.615499983111
                                       }
                                     }
                                   }
                                 ],
-                                "name": "NODE_0000067",
+                                "name": "NODE_0000062",
                                 "node_attrs": {
                                   "S1_mutations": {
                                     "value": 1.0
@@ -10287,10 +10264,10 @@
                                   },
                                   "num_date": {
                                     "confidence": [
-                                      2020.3955509325947,
-                                      2020.6052677119194
+                                      2020.3848909466758,
+                                      2020.6028487429867
                                     ],
-                                    "value": 2020.5223351597774
+                                    "value": 2020.52883635938
                                   }
                                 }
                               }
@@ -10322,10 +10299,10 @@
                               },
                               "num_date": {
                                 "confidence": [
-                                  2020.3897413993727,
-                                  2020.6035792380196
+                                  2020.3817390194251,
+                                  2020.5995598779455
                                 ],
-                                "value": 2020.499823580723
+                                "value": 2020.5002131095566
                               }
                             }
                           }
@@ -10357,10 +10334,10 @@
                           },
                           "num_date": {
                             "confidence": [
-                              2020.2850617276576,
-                              2020.4863429783588
+                              2020.28554864702,
+                              2020.4861392242055
                             ],
-                            "value": 2020.379756041016
+                            "value": 2020.3736019473638
                           }
                         }
                       }
@@ -10392,10 +10369,10 @@
                       },
                       "num_date": {
                         "confidence": [
-                          2020.2335180473362,
+                          2020.232711974043,
                           2020.3838797814208
                         ],
-                        "value": 2020.3266178173576
+                        "value": 2020.3276633037485
                       }
                     }
                   }
@@ -10430,15 +10407,15 @@
                   },
                   "num_date": {
                     "confidence": [
-                      2020.2163263091456,
-                      2020.378212377776
+                      2020.2138091142656,
+                      2020.3762622859806
                     ],
-                    "value": 2020.3203397222044
+                    "value": 2020.3197890559939
                   }
                 }
               }
             ],
-            "name": "NODE_0000037",
+            "name": "NODE_0000036",
             "node_attrs": {
               "S1_mutations": {
                 "value": 1.0
@@ -10468,15 +10445,15 @@
               },
               "num_date": {
                 "confidence": [
-                  2020.1324537339221,
-                  2020.370634464372
+                  2020.1311402103884,
+                  2020.3685690082134
                 ],
-                "value": 2020.2627854466052
+                "value": 2020.2607129524506
               }
             }
           }
         ],
-        "name": "NODE_0000025",
+        "name": "NODE_0000038",
         "node_attrs": {
           "S1_mutations": {
             "value": 1.0
@@ -10506,10 +10483,10 @@
           },
           "num_date": {
             "confidence": [
-              2020.1824629455073,
-              2020.1911728289288
+              2020.1820738749427,
+              2020.1901780984379
             ],
-            "value": 2020.184126463077
+            "value": 2020.1842186879626
           }
         }
       }
@@ -10544,7 +10521,7 @@
       },
       "num_date": {
         "confidence": [
-          2019.9257955900143,
+          2019.9255380530324,
           2019.9986301369863
         ],
         "value": 2019.9986301369863

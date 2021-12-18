@@ -1,6 +1,6 @@
 {
   "meta": {
-    "build_url": "https://github.com/myusername/myrepository/",
+    "build_url": "https://github.com/laurabashor/SARS2felids",
     "colorings": [
       {
         "key": "clade_membership",
@@ -46,45 +46,14 @@
         "type": "categorical"
       },
       {
-        "key": "num_date",
-        "title": "Sampling date",
-        "type": "continuous"
-      },
-      {
         "key": "gt",
         "title": "Genotype",
         "type": "categorical"
       },
       {
-        "key": "location",
-        "scale": [
-          [
-            "Chennai",
-            "#447CCD"
-          ],
-          [
-            "Venezia",
-            "#5EA9A1"
-          ],
-          [
-            "Boras",
-            "#8ABB6A"
-          ],
-          [
-            "Vsevolozhsk",
-            "#BEBB48"
-          ],
-          [
-            "Barreiras",
-            "#E29E39"
-          ],
-          [
-            "Brazos County",
-            "#E2562B"
-          ]
-        ],
-        "title": "Location",
-        "type": "categorical"
+        "key": "num_date",
+        "title": "Sampling date",
+        "type": "continuous"
       },
       {
         "key": "division",
@@ -414,16 +383,6 @@
         "type": "categorical"
       },
       {
-        "key": "S1_mutations",
-        "title": "S1_mutations",
-        "type": "continuous"
-      },
-      {
-        "key": "mutational_fitness",
-        "title": "mutational_fitness",
-        "type": "continuous"
-      },
-      {
         "key": "logistic_growth",
         "title": "logistic_growth",
         "type": "continuous"
@@ -434,9 +393,9 @@
         "type": "continuous"
       },
       {
-        "key": "emerging_lineage",
-        "title": "emerging_lineage",
-        "type": "categorical"
+        "key": "mutational_fitness",
+        "title": "mutational_fitness",
+        "type": "continuous"
       },
       {
         "key": "epiweek",
@@ -676,12 +635,22 @@
             "#DC2F24"
           ]
         ]
+      },
+      {
+        "key": "emerging_lineage",
+        "title": "emerging_lineage",
+        "type": "categorical"
+      },
+      {
+        "key": "S1_mutations",
+        "title": "S1_mutations",
+        "type": "continuous"
       }
     ],
-    "description": "This is the description that appears below your visualization in Auspice. Edit me in `my_profiles/example/description.md`.\n",
+    "description": "This phylogeny shows all publicly available SARS-CoV-2 sequences recovered from domestic cats since the start of the COVID-19 pandemic through December 2021.\n",
     "display_defaults": {
-      "branch_label": "none",
-      "color_by": "division",
+      "branch_label": "clade",
+      "color_by": "num_date",
       "distance_measure": "num_date",
       "geo_resolution": "division",
       "map_triplicate": true
@@ -1124,8 +1093,8 @@
     ],
     "maintainers": [
       {
-        "name": "My name",
-        "url": "www.myurl.com"
+        "name": "Laura Bashor",
+        "url": "https://github.com/laurabashor/"
       }
     ],
     "panels": [
