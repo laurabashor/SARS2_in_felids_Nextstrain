@@ -55,6 +55,11 @@
         "type": "categorical"
       },
       {
+        "key": "logistic_growth",
+        "title": "logistic_growth",
+        "type": "continuous"
+      },
+      {
         "key": "S1_mutations",
         "title": "S1_mutations",
         "type": "boolean"
@@ -63,6 +68,11 @@
         "key": "emerging_lineage",
         "title": "emerging_lineage",
         "type": "categorical"
+      },
+      {
+        "key": "mutational_fitness",
+        "title": "mutational_fitness",
+        "type": "continuous"
       },
       {
         "key": "epiweek",
@@ -78,16 +88,6 @@
             "#DC2F24"
           ]
         ]
-      },
-      {
-        "key": "logistic_growth",
-        "title": "logistic_growth",
-        "type": "continuous"
-      },
-      {
-        "key": "mutational_fitness",
-        "title": "mutational_fitness",
-        "type": "continuous"
       }
     ],
     "description": "Phylogeny of SARS2 recovered from deer mice, wood rats and skunks and sequenced by Ginkgo\n",
@@ -332,415 +332,6 @@
         "children": [
           {
             "branch_attrs": {
-              "mutations": {
-                "nuc": [
-                  "A29871-",
-                  "A29872-",
-                  "A29873-",
-                  "A29874-",
-                  "A29875-"
-                ]
-              }
-            },
-            "name": "Deer_mouse_B2",
-            "node_attrs": {
-              "S1_mutations": {
-                "value": 1.0
-              },
-              "clade_membership": {
-                "value": "19B"
-              },
-              "div": 7,
-              "emerging_lineage": {
-                "value": "19B"
-              },
-              "epiweek": {
-                "value": "202220"
-              },
-              "host": {
-                "value": "Deer mouse"
-              },
-              "mutational_fitness": {
-                "value": 0.23158586
-              },
-              "num_date": {
-                "confidence": [
-                  2022.3739726027397,
-                  2022.3739726027397
-                ],
-                "value": 2022.3739726027397
-              }
-            }
-          },
-          {
-            "branch_attrs": {
-              "mutations": {}
-            },
-            "name": "Deer_mouse_B1",
-            "node_attrs": {
-              "S1_mutations": {
-                "value": 1.0
-              },
-              "clade_membership": {
-                "value": "19B"
-              },
-              "div": 7,
-              "emerging_lineage": {
-                "value": "19B"
-              },
-              "epiweek": {
-                "value": "202220"
-              },
-              "host": {
-                "value": "Deer mouse"
-              },
-              "mutational_fitness": {
-                "value": 0.23158586
-              },
-              "num_date": {
-                "confidence": [
-                  2022.3739726027397,
-                  2022.3739726027397
-                ],
-                "value": 2022.3739726027397
-              }
-            }
-          },
-          {
-            "branch_attrs": {
-              "mutations": {}
-            },
-            "name": "Wood_rat_R1",
-            "node_attrs": {
-              "S1_mutations": {
-                "value": 1.0
-              },
-              "clade_membership": {
-                "value": "19B"
-              },
-              "div": 7,
-              "emerging_lineage": {
-                "value": "19B"
-              },
-              "epiweek": {
-                "value": "202220"
-              },
-              "host": {
-                "value": "Wood rat"
-              },
-              "mutational_fitness": {
-                "value": 0.23158586
-              },
-              "num_date": {
-                "confidence": [
-                  2022.3739726027397,
-                  2022.3739726027397
-                ],
-                "value": 2022.3739726027397
-              }
-            }
-          },
-          {
-            "branch_attrs": {
-              "mutations": {
-                "nuc": [
-                  "-29876A",
-                  "-29877A",
-                  "-29878A",
-                  "-29879A"
-                ]
-              }
-            },
-            "name": "Deer_mouse_A1",
-            "node_attrs": {
-              "S1_mutations": {
-                "value": 1.0
-              },
-              "clade_membership": {
-                "value": "19B"
-              },
-              "div": 7,
-              "emerging_lineage": {
-                "value": "19B"
-              },
-              "epiweek": {
-                "value": "202220"
-              },
-              "host": {
-                "value": "Deer mouse"
-              },
-              "mutational_fitness": {
-                "value": 0.23158586
-              },
-              "num_date": {
-                "confidence": [
-                  2022.3739726027397,
-                  2022.3739726027397
-                ],
-                "value": 2022.3739726027397
-              }
-            }
-          },
-          {
-            "branch_attrs": {
-              "mutations": {
-                "nuc": [
-                  "A29871-",
-                  "A29872-",
-                  "A29873-",
-                  "A29874-",
-                  "A29875-"
-                ]
-              }
-            },
-            "name": "Deer_mouse_C2",
-            "node_attrs": {
-              "S1_mutations": {
-                "value": 1.0
-              },
-              "clade_membership": {
-                "value": "19B"
-              },
-              "div": 7,
-              "emerging_lineage": {
-                "value": "19B"
-              },
-              "epiweek": {
-                "value": "202220"
-              },
-              "host": {
-                "value": "Deer mouse"
-              },
-              "mutational_fitness": {
-                "value": 0.23158586
-              },
-              "num_date": {
-                "confidence": [
-                  2022.3739726027397,
-                  2022.3739726027397
-                ],
-                "value": 2022.3739726027397
-              }
-            }
-          },
-          {
-            "branch_attrs": {
-              "mutations": {
-                "nuc": [
-                  "-29876A"
-                ]
-              }
-            },
-            "name": "Wood_rat_2",
-            "node_attrs": {
-              "S1_mutations": {
-                "value": 1.0
-              },
-              "clade_membership": {
-                "value": "19B"
-              },
-              "div": 7,
-              "emerging_lineage": {
-                "value": "19B"
-              },
-              "epiweek": {
-                "value": "202220"
-              },
-              "host": {
-                "value": "Wood rat"
-              },
-              "mutational_fitness": {
-                "value": 0.23158586
-              },
-              "num_date": {
-                "confidence": [
-                  2022.3739726027397,
-                  2022.3739726027397
-                ],
-                "value": 2022.3739726027397
-              }
-            }
-          },
-          {
-            "branch_attrs": {
-              "mutations": {}
-            },
-            "name": "Deer_mouse_C3",
-            "node_attrs": {
-              "S1_mutations": {
-                "value": 1.0
-              },
-              "clade_membership": {
-                "value": "19B"
-              },
-              "div": 7,
-              "emerging_lineage": {
-                "value": "19B"
-              },
-              "epiweek": {
-                "value": "202220"
-              },
-              "host": {
-                "value": "Deer mouse"
-              },
-              "mutational_fitness": {
-                "value": 0.23158586
-              },
-              "num_date": {
-                "confidence": [
-                  2022.3739726027397,
-                  2022.3739726027397
-                ],
-                "value": 2022.3739726027397
-              }
-            }
-          },
-          {
-            "branch_attrs": {
-              "mutations": {}
-            },
-            "name": "Wood_rat_1",
-            "node_attrs": {
-              "S1_mutations": {
-                "value": 1.0
-              },
-              "clade_membership": {
-                "value": "19B"
-              },
-              "div": 7,
-              "emerging_lineage": {
-                "value": "19B"
-              },
-              "epiweek": {
-                "value": "202220"
-              },
-              "host": {
-                "value": "Wood rat"
-              },
-              "mutational_fitness": {
-                "value": 0.23158586
-              },
-              "num_date": {
-                "confidence": [
-                  2022.3739726027397,
-                  2022.3739726027397
-                ],
-                "value": 2022.3739726027397
-              }
-            }
-          },
-          {
-            "branch_attrs": {
-              "mutations": {}
-            },
-            "name": "Deer_mouse_A3",
-            "node_attrs": {
-              "S1_mutations": {
-                "value": 1.0
-              },
-              "clade_membership": {
-                "value": "19B"
-              },
-              "div": 7,
-              "emerging_lineage": {
-                "value": "19B"
-              },
-              "epiweek": {
-                "value": "202220"
-              },
-              "host": {
-                "value": "Deer mouse"
-              },
-              "mutational_fitness": {
-                "value": 0.23158586
-              },
-              "num_date": {
-                "confidence": [
-                  2022.3739726027397,
-                  2022.3739726027397
-                ],
-                "value": 2022.3739726027397
-              }
-            }
-          },
-          {
-            "branch_attrs": {
-              "mutations": {
-                "nuc": [
-                  "A29871-",
-                  "A29872-",
-                  "A29873-",
-                  "A29874-",
-                  "A29875-"
-                ]
-              }
-            },
-            "name": "Wood_rat_R3",
-            "node_attrs": {
-              "S1_mutations": {
-                "value": 1.0
-              },
-              "clade_membership": {
-                "value": "19B"
-              },
-              "div": 7,
-              "emerging_lineage": {
-                "value": "19B"
-              },
-              "epiweek": {
-                "value": "202220"
-              },
-              "host": {
-                "value": "Wood rat"
-              },
-              "mutational_fitness": {
-                "value": 0.23158586
-              },
-              "num_date": {
-                "confidence": [
-                  2022.3739726027397,
-                  2022.3739726027397
-                ],
-                "value": 2022.3739726027397
-              }
-            }
-          },
-          {
-            "branch_attrs": {
-              "mutations": {}
-            },
-            "name": "Skunk_2_plaque",
-            "node_attrs": {
-              "S1_mutations": {
-                "value": 1.0
-              },
-              "clade_membership": {
-                "value": "19B"
-              },
-              "div": 7,
-              "emerging_lineage": {
-                "value": "19B"
-              },
-              "epiweek": {
-                "value": "202220"
-              },
-              "host": {
-                "value": "Skunk"
-              },
-              "mutational_fitness": {
-                "value": 0.23158586
-              },
-              "num_date": {
-                "confidence": [
-                  2022.3739726027397,
-                  2022.3739726027397
-                ],
-                "value": 2022.3739726027397
-              }
-            }
-          },
-          {
-            "branch_attrs": {
               "mutations": {}
             },
             "name": "Wood_rat_R2",
@@ -881,9 +472,418 @@
                 "value": 2022.3739726027397
               }
             }
+          },
+          {
+            "branch_attrs": {
+              "mutations": {}
+            },
+            "name": "Wood_rat_1",
+            "node_attrs": {
+              "S1_mutations": {
+                "value": 1.0
+              },
+              "clade_membership": {
+                "value": "19B"
+              },
+              "div": 7,
+              "emerging_lineage": {
+                "value": "19B"
+              },
+              "epiweek": {
+                "value": "202220"
+              },
+              "host": {
+                "value": "Wood rat"
+              },
+              "mutational_fitness": {
+                "value": 0.23158586
+              },
+              "num_date": {
+                "confidence": [
+                  2022.3739726027397,
+                  2022.3739726027397
+                ],
+                "value": 2022.3739726027397
+              }
+            }
+          },
+          {
+            "branch_attrs": {
+              "mutations": {
+                "nuc": [
+                  "A29871-",
+                  "A29872-",
+                  "A29873-",
+                  "A29874-",
+                  "A29875-"
+                ]
+              }
+            },
+            "name": "Deer_mouse_B2",
+            "node_attrs": {
+              "S1_mutations": {
+                "value": 1.0
+              },
+              "clade_membership": {
+                "value": "19B"
+              },
+              "div": 7,
+              "emerging_lineage": {
+                "value": "19B"
+              },
+              "epiweek": {
+                "value": "202220"
+              },
+              "host": {
+                "value": "Deer mouse"
+              },
+              "mutational_fitness": {
+                "value": 0.23158586
+              },
+              "num_date": {
+                "confidence": [
+                  2022.3739726027397,
+                  2022.3739726027397
+                ],
+                "value": 2022.3739726027397
+              }
+            }
+          },
+          {
+            "branch_attrs": {
+              "mutations": {}
+            },
+            "name": "Skunk_2_plaque",
+            "node_attrs": {
+              "S1_mutations": {
+                "value": 1.0
+              },
+              "clade_membership": {
+                "value": "19B"
+              },
+              "div": 7,
+              "emerging_lineage": {
+                "value": "19B"
+              },
+              "epiweek": {
+                "value": "202220"
+              },
+              "host": {
+                "value": "Skunk"
+              },
+              "mutational_fitness": {
+                "value": 0.23158586
+              },
+              "num_date": {
+                "confidence": [
+                  2022.3739726027397,
+                  2022.3739726027397
+                ],
+                "value": 2022.3739726027397
+              }
+            }
+          },
+          {
+            "branch_attrs": {
+              "mutations": {
+                "nuc": [
+                  "-29876A"
+                ]
+              }
+            },
+            "name": "Wood_rat_2",
+            "node_attrs": {
+              "S1_mutations": {
+                "value": 1.0
+              },
+              "clade_membership": {
+                "value": "19B"
+              },
+              "div": 7,
+              "emerging_lineage": {
+                "value": "19B"
+              },
+              "epiweek": {
+                "value": "202220"
+              },
+              "host": {
+                "value": "Wood rat"
+              },
+              "mutational_fitness": {
+                "value": 0.23158586
+              },
+              "num_date": {
+                "confidence": [
+                  2022.3739726027397,
+                  2022.3739726027397
+                ],
+                "value": 2022.3739726027397
+              }
+            }
+          },
+          {
+            "branch_attrs": {
+              "mutations": {}
+            },
+            "name": "Deer_mouse_A3",
+            "node_attrs": {
+              "S1_mutations": {
+                "value": 1.0
+              },
+              "clade_membership": {
+                "value": "19B"
+              },
+              "div": 7,
+              "emerging_lineage": {
+                "value": "19B"
+              },
+              "epiweek": {
+                "value": "202220"
+              },
+              "host": {
+                "value": "Deer mouse"
+              },
+              "mutational_fitness": {
+                "value": 0.23158586
+              },
+              "num_date": {
+                "confidence": [
+                  2022.3739726027397,
+                  2022.3739726027397
+                ],
+                "value": 2022.3739726027397
+              }
+            }
+          },
+          {
+            "branch_attrs": {
+              "mutations": {
+                "nuc": [
+                  "A29871-",
+                  "A29872-",
+                  "A29873-",
+                  "A29874-",
+                  "A29875-"
+                ]
+              }
+            },
+            "name": "Wood_rat_R3",
+            "node_attrs": {
+              "S1_mutations": {
+                "value": 1.0
+              },
+              "clade_membership": {
+                "value": "19B"
+              },
+              "div": 7,
+              "emerging_lineage": {
+                "value": "19B"
+              },
+              "epiweek": {
+                "value": "202220"
+              },
+              "host": {
+                "value": "Wood rat"
+              },
+              "mutational_fitness": {
+                "value": 0.23158586
+              },
+              "num_date": {
+                "confidence": [
+                  2022.3739726027397,
+                  2022.3739726027397
+                ],
+                "value": 2022.3739726027397
+              }
+            }
+          },
+          {
+            "branch_attrs": {
+              "mutations": {}
+            },
+            "name": "Deer_mouse_C3",
+            "node_attrs": {
+              "S1_mutations": {
+                "value": 1.0
+              },
+              "clade_membership": {
+                "value": "19B"
+              },
+              "div": 7,
+              "emerging_lineage": {
+                "value": "19B"
+              },
+              "epiweek": {
+                "value": "202220"
+              },
+              "host": {
+                "value": "Deer mouse"
+              },
+              "mutational_fitness": {
+                "value": 0.23158586
+              },
+              "num_date": {
+                "confidence": [
+                  2022.3739726027397,
+                  2022.3739726027397
+                ],
+                "value": 2022.3739726027397
+              }
+            }
+          },
+          {
+            "branch_attrs": {
+              "mutations": {
+                "nuc": [
+                  "-29876A",
+                  "-29877A",
+                  "-29878A",
+                  "-29879A"
+                ]
+              }
+            },
+            "name": "Deer_mouse_A1",
+            "node_attrs": {
+              "S1_mutations": {
+                "value": 1.0
+              },
+              "clade_membership": {
+                "value": "19B"
+              },
+              "div": 7,
+              "emerging_lineage": {
+                "value": "19B"
+              },
+              "epiweek": {
+                "value": "202220"
+              },
+              "host": {
+                "value": "Deer mouse"
+              },
+              "mutational_fitness": {
+                "value": 0.23158586
+              },
+              "num_date": {
+                "confidence": [
+                  2022.3739726027397,
+                  2022.3739726027397
+                ],
+                "value": 2022.3739726027397
+              }
+            }
+          },
+          {
+            "branch_attrs": {
+              "mutations": {
+                "nuc": [
+                  "A29871-",
+                  "A29872-",
+                  "A29873-",
+                  "A29874-",
+                  "A29875-"
+                ]
+              }
+            },
+            "name": "Deer_mouse_C2",
+            "node_attrs": {
+              "S1_mutations": {
+                "value": 1.0
+              },
+              "clade_membership": {
+                "value": "19B"
+              },
+              "div": 7,
+              "emerging_lineage": {
+                "value": "19B"
+              },
+              "epiweek": {
+                "value": "202220"
+              },
+              "host": {
+                "value": "Deer mouse"
+              },
+              "mutational_fitness": {
+                "value": 0.23158586
+              },
+              "num_date": {
+                "confidence": [
+                  2022.3739726027397,
+                  2022.3739726027397
+                ],
+                "value": 2022.3739726027397
+              }
+            }
+          },
+          {
+            "branch_attrs": {
+              "mutations": {}
+            },
+            "name": "Wood_rat_R1",
+            "node_attrs": {
+              "S1_mutations": {
+                "value": 1.0
+              },
+              "clade_membership": {
+                "value": "19B"
+              },
+              "div": 7,
+              "emerging_lineage": {
+                "value": "19B"
+              },
+              "epiweek": {
+                "value": "202220"
+              },
+              "host": {
+                "value": "Wood rat"
+              },
+              "mutational_fitness": {
+                "value": 0.23158586
+              },
+              "num_date": {
+                "confidence": [
+                  2022.3739726027397,
+                  2022.3739726027397
+                ],
+                "value": 2022.3739726027397
+              }
+            }
+          },
+          {
+            "branch_attrs": {
+              "mutations": {}
+            },
+            "name": "Deer_mouse_B1",
+            "node_attrs": {
+              "S1_mutations": {
+                "value": 1.0
+              },
+              "clade_membership": {
+                "value": "19B"
+              },
+              "div": 7,
+              "emerging_lineage": {
+                "value": "19B"
+              },
+              "epiweek": {
+                "value": "202220"
+              },
+              "host": {
+                "value": "Deer mouse"
+              },
+              "mutational_fitness": {
+                "value": 0.23158586
+              },
+              "num_date": {
+                "confidence": [
+                  2022.3739726027397,
+                  2022.3739726027397
+                ],
+                "value": 2022.3739726027397
+              }
+            }
           }
         ],
-        "name": "NODE_0000003",
+        "name": "NODE_0000015",
         "node_attrs": {
           "S1_mutations": {
             "value": 1.0
@@ -900,7 +900,7 @@
           },
           "num_date": {
             "confidence": [
-              2022.3676920584862,
+              2022.3676804952534,
               2022.3739726027397
             ],
             "value": 2022.3739726027397
@@ -933,7 +933,7 @@
       },
       "num_date": {
         "confidence": [
-          2019.714663529178,
+          2019.947506159163,
           2019.9986301369863
         ],
         "value": 2019.9986301369863
