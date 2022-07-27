@@ -1,6 +1,6 @@
-# SARS2felids
+# SARS2felids:
 
-# Data and code to support: Rapid evolution of SARS-CoV-2 in domestic cats
+## Data and code to support: Rapid evolution of SARS-CoV-2 in domestic cats
 
 Laura Bashor, Roderick B Gagne, Angela Bosco-Lauth, Mark Stenglein, and Sue VandeWoude
 
