@@ -8,6 +8,13 @@ Data and R code for processing, analyzing & visualizing results after running ht
 
 Three cohorts of cats (N=23) were inoculated with SARS-CoV-2 USA-WA1/2020 or infected via cat-to-cat contact transmission. Full viral genomes were recovered from RNA obtained from nasal washes 1-3 days post-infection, and analyzed for within-host viral variants. 
 
+Three excel spreadsheets listing all the within-host variants detected within the cats and the P1, P2, and P3 stocks used for inoculations are available:
+
+| Command | Description |
+| --- | --- |
+| `git status` | List all *new or modified* files |
+| `git diff` | Show file differences that **haven't been** staged |
+
 Raw sequence data is publicly available in NCBI SRA database under Bioprojects PRJNA704947 and 
 PRJNA842572.
 
