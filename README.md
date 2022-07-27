@@ -27,10 +27,8 @@ The unmodified excel spreadsheet variant table output by the pipeline listing al
 Raw sequence data is publicly available in NCBI SRA database under Bioprojects PRJNA704947 and 
 PRJNA842572.
 
-Custom Nextstrain builds for SARS-CoV-2 sequences recovered from domestic cats and other felids.
-
-Domestic cats: https://nextstrain.org/community/laurabashor/SARS2felids/catphylogeny
-
-All felids: https://nextstrain.org/community/laurabashor/SARS2felids/felidphylogeny
+Custom Nextstrain builds for SARS-CoV-2 sequences recovered from domestic cats and other felids:
+- Domestic cats: https://nextstrain.org/community/laurabashor/SARS2felids/catphylogeny
+- All felids: https://nextstrain.org/community/laurabashor/SARS2felids/felidphylogeny
 
 
