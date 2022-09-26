@@ -27,6 +27,6 @@ The unmodified excel spreadsheet variant table output by the pipeline listing al
 ########################
 
 Custom Nextstrain builds for SARS-CoV-2 sequences recovered from domestic cats and other felids (all sequences obtained from GISAID.org):
-- [Domestic cats]([https://nextstrain.org/community/laurabashor/SARS2felids/catphylogeny])
+- [Domestic cats](https://nextstrain.org/community/laurabashor/SARS2felids/catphylogeny)
 - All felids: https://nextstrain.org/community/laurabashor/SARS2felids/felidphylogeny
 
