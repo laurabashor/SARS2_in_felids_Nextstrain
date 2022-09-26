@@ -202,6 +202,7 @@ P2_plot <- ggplot(df4) +
 
 
 P3_plot <- ggplot(P3) +
+<<<<<<< HEAD
   geom_point(data=(P3 %>%
                      filter(!is.na(frequency))),
              aes(y=fct_relevel(dataset_ID, 
@@ -243,6 +244,49 @@ P3_plot <- ggplot(P3) +
         legend.position="none",
         axis.title.y=element_blank(),
         axis.text=element_text(size=14))
+=======
+    geom_point(data=(P3 %>%
+                       filter(!is.na(frequency))),
+               aes(y=fct_relevel(dataset_ID, 
+                                 c("Passage_3",
+                                   "Cat_1", "Cat_5" ,"Cat_6",
+                                   "Cat_13" , "Cat_14", "Cat_15" ,
+                                   "Cat_16" , "Cat_17", "Cat_18",
+                                   "Cat_19" , "Cat_20" , "Cat_21" ,
+                                   "Cat_22", "Cat_23",  "Cat_24"  ,
+                                   "Cat_25" , "Cat_26")),
+                   x=position, 
+                   col=factor(effect2, 
+                              levels=c("frameshift", "inframe_deletion", 
+                                       "inframe_insertion", "synonymous_SNV", 
+                                       "nonsynonymous_SNV")), 
+                   shape=indel), 
+               size=3, alpha=0.8, stroke=FALSE)  +
+    geom_vline(aes(xintercept=21563))+
+    geom_vline(aes(xintercept=25384))+
+    scale_y_discrete(labels=c("P3",
+                              "Cat 1", "Cat 5" ,"Cat 6*",
+                              "Cat 13" , "Cat 14", "Cat 15" ,
+                              "Cat 16" , "Cat 17", "Cat 18",
+                              "Cat 19" , "Cat 20" , "Cat 21" ,
+                              "Cat 22", "Cat 23",  "Cat 24"  ,
+                              "Cat 25" , "Cat 26*"))+
+    scale_color_manual(name="Variant effect", 
+                       labels=c("Frameshift", 
+                                "Inframe deletion",
+                                "Inframe insertion",
+                                "Synonymous SNV",
+                                "Nonsynonymous SNV"),
+                       values=colors2)+
+    scale_shape(name="Variant type", labels=c("SNV", "SV"))+
+    theme_bw()+
+    labs(x="Position in genome (nt)") + 
+    theme_classic()+
+    theme(axis.title.x = element_text(size=16),
+          legend.position="none",
+          axis.title.y=element_blank(),
+          axis.text=element_text(size=14))
+>>>>>>> f594f73ac33fe22b99f29b1fbc3eb3fad9f945e7
 
 P2_P3 <- ggarrange(P2_plot, P3_plot, ncol=1, heights = c(1,2.57), 
                    legend = "right", common.legend = TRUE, 
@@ -252,4 +296,8 @@ P2_P3 <- ggarrange(P2_plot, P3_plot, ncol=1, heights = c(1,2.57),
 ragg::agg_tiff("fig2.tiff", width = 10, height = 8, 
                units = "in", res = 500, compression = "lzw")
 P2_P3
+<<<<<<< HEAD
 dev.off()
+=======
+dev.off()
+>>>>>>> f594f73ac33fe22b99f29b1fbc3eb3fad9f945e7
