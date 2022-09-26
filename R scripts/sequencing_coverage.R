@@ -84,4 +84,3 @@ ggplot(df_cats, aes(x=log10(nasal_pfu + 0.001), y=mean_depth)) +
 mean_pfu_model <- lm(mean_depth ~ log10(nasal_pfu + 0.001), df_cats)
 glance(mean_pfu_model) #p = 0.0764, R2 = 0.142, almost lower coverage with higher pfu!
 
-##so nothing is significant

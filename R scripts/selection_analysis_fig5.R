@@ -9,6 +9,7 @@ library(tidyverse)
 library(ggpubr)
 library(openxlsx)
 library(broom)
+library(ragg)
 
 #load in cleaned up files
 setwd("/Users/_lbashor/Dropbox/SARS-CoV-2 cat manuscript/cat ms results/R analysis cats/7_selection_cats")
@@ -225,22 +226,24 @@ plot2 <- ggpaired(prod, cond1 = "mean_piN", cond2 = "mean_piS",
                   color = "condition", 
                   line.color = "gray", 
                   line.size = 0.4, palette="npg",
-                  xlab=FALSE, ylab=FALSE, 
+                  xlab=FALSE, ylab=(expression("Nucleotide diversity " ~ (pi))), 
                   font.tickslab = c(12, "plain", "black"),
                   font.legend = c(12, "plain", "black"),
                   legend.title = "",
                   ylim=c(0,0.0025), ggtheme = theme_classic())+
-    stat_compare_means(method="t.test", paired=TRUE, size=4, 
+  stat_compare_means(method="t.test", paired=TRUE, size=4, 
                      vjust=-2, label="p.format") +
   scale_color_manual(labels = c('mean_piN' = expression(pi*N),
-                              'mean_piS' = expression(pi*S)),
-                       values = c("#E64B35FF", "skyblue2")) +
+                                'mean_piS' = expression(pi*S)),
+                     values = c("#E64B35FF", "skyblue2")) +
   scale_x_discrete(labels = c('mean_piN' = expression(pi*N),
                               'mean_piS' = expression(pi*S)))
 
 plot2 <- facet(plot2, facet.by = "product", 
-               ncol = 5, panel.labs.font = list(face = "bold", size = 12))
-        
+               ncol = 5, panel.labs.font = list(face = "bold", size = 12))+
+  font("ylab", size = 14)+
+  theme(plot.margin = margin(0.5,0.5,0.5,0.5, "cm")) 
+
 plot2
 
 #if we look at just directly inoculated cats, patterns are the same
@@ -258,7 +261,6 @@ plot2c <- ggpaired(prod_contact, cond1 = "mean_piN", cond2 = "mean_piS",
 
 plot2c
 
-
 #final plots/sheets for these results#################################
 #(1) piN and piS for all datasets at a population level,
 #and by infection method and by cohort 
@@ -273,19 +275,9 @@ plot1c
 #(2) 
 plot2
 
-pdf("selection_population_level.pdf", onefile=F)
-plot1
-dev.off()
-
-pdf("selection_infection_method.pdf", onefile=F)
-plot1b
-dev.off()
-
-pdf("selection_cohort.pdf", onefile=F)
-plot1c
-dev.off()
-
-pdf("selection_gene_level.pdf", onefile=F)
+#save plot
+ragg::agg_tiff("fig5.tiff", width = 7, height = 7, 
+               units = "in", res = 800, compression = "lzw")
 plot2
 dev.off()
 

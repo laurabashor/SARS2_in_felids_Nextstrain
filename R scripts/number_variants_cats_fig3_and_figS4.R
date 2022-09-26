@@ -8,6 +8,7 @@ library(RColorBrewer)
 library(ggpubr)
 library(readxl)
 library(GGally)
+library(ragg)
 
 #start with data frame of cleaned data, combined replicates, and iVar-filtered
 df <- read_xlsx("/Users/_lbashor/Dropbox/SARS-CoV-2 cat manuscript/cat ms results/R analysis cats/2_ivar_cats/variant_summary_0.03_iVar_processed.xlsx")
@@ -69,9 +70,9 @@ colors <- c("forestgreen","pink","gold1","#E64B35FF", "skyblue2","#3C5488FF")
 
 infection_method <- ggplot(df.meta, aes(x=infection_method, y=number_of_variants))+
   geom_boxplot(outlier.shape=NA, lwd=0.3)+
-  geom_jitter(aes(color=factor(cohort)), 
+  geom_jitter(aes(color=factor(cohort), shape=dpi),
               position=position_jitter(0.2), alpha=0.8, size=2)+
-  labs(x="Infection method", y="Number of variants", color = "cohort")+
+  labs(x="Infection method", y="Number of variants", color = "Cohort", shape = "DPI")+
   ylim(c(0,35))+
   scale_x_discrete(labels=c("contact" = "contact", 
                             "direct_inoculation" = "direct inoculation"))+
@@ -81,8 +82,9 @@ infection_method <- ggplot(df.meta, aes(x=infection_method, y=number_of_variants
   theme(axis.text=element_text(size=10), 
         axis.title.y=element_text(size=12),
         axis.title.x=element_text(size=12),
-        legend.title = element_text(size=12),
-        legend.position = "none")
+        legend.position = "bottom",
+        legend.background=element_rect(color="black"),
+        legend.title = element_text(size=12))
 
 infection_method
 
@@ -93,13 +95,13 @@ df.direct$dose_level <- factor(df.direct$dose_level,
                                         "med-high", "high"))
 
 dose_level <- ggplot(df.direct, aes(x=dose_level, y=number_of_variants)) +
-                       geom_boxplot(outlier.shape=NA, lwd=0.3)+
-                       geom_jitter(aes( color=factor(cohort),
-                                        shape=dpi), 
-                                   position=position_jitter(0.2), 
-                                   alpha=0.8, size=2)+
-                       labs(x="Dose level", y="Number of variants", color = "cohort", 
-                            shape = "DPI") +
+  geom_boxplot(outlier.shape=NA, lwd=0.3)+
+  geom_jitter(aes( color=factor(cohort),
+                   shape=dpi), 
+              position=position_jitter(0.2), 
+              alpha=0.8, size=2)+
+  labs(x="Dose level", y="Number of variants", color = "cohort", 
+       shape = "DPI") +
   scale_color_manual(labels = c("A", "B", "C"), 
                      values=c("#00A087FF","#E64B35FF", "#8491B4FF")) +
   ylim(c(0,35))+
@@ -107,8 +109,7 @@ dose_level <- ggplot(df.direct, aes(x=dose_level, y=number_of_variants)) +
   theme(axis.text=element_text(size=10), 
         axis.title.y=element_text(size=12),
         axis.title.x=element_text(size=12),
-        legend.position = "bottom",
-        legend.background=element_rect(color="black"))
+        legend.position = "none")
   
 print(dose_level)
 
@@ -158,13 +159,17 @@ number_variants_titer
 dev.off()
 
 ### final plot ############
-leg <- get_legend(dose_level)
+leg <- get_legend(infection_method)
 number_of_variants <- ggarrange(hist, infection_method, dose_level,
-                                ncol=3, labels="auto", legend.grob = leg)
+                                ncol=3, labels="auto", legend.grob = leg) +
+  theme(plot.margin = margin(0.5,0.5,0.5,0.5, "cm")) 
+
 
 number_of_variants
 
-pdf("number_of_variants_5_25_22.pdf", width=10, height=4)
+#export plot
+ragg::agg_tiff("fig3.tiff", width = 10, height = 4, 
+               units = "in", res = 800, compression = "lzw")
 number_of_variants
 dev.off()
 

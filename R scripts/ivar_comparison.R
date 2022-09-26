@@ -143,9 +143,9 @@ anti_vvc <- anti_join(vvc_snvs, ivar_snvs, by = c("position", "reference_base"))
 # because it was not at all in iVar, I think we will throw it out
 
 #ultimately we may want THROW OUT: 
-    # 15106/T556P, 1029/F75S, 2549/D582Y, 4668/S650F, 7988/A1757S
-    # 10605/P184H, #13035/A4V, 13394/K124E, 
-    # 15036/K532N, #15168/L576L, #20054/E145G
+# 15106/T556P, 1029/F75S, 2549/D582Y, 4668/S650F, 7988/A1757S
+# 10605/P184H, #13035/A4V, 13394/K124E, 
+# 15036/K532N, #15168/L576L, #20054/E145G
 
 #is there anything egregious?
 #S650F reaches >50% in Cat 9, it's in vvc but not iVar
@@ -164,7 +164,6 @@ anti_vvc_indels <- anti_join(vvc_indels, ivar_indels, by = c("position")) #indel
 
 #for the one indel not detected with iVar, G89fs, it was found in one rep at 1%
 #so it's another artifact of when we apply the 3% cutoff and we can KEEP it
-
 
 #let's save all this info as an excel spreadsheet
 
