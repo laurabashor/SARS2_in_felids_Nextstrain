@@ -43,6 +43,8 @@ df.filtered <- df %>%
 #18 in the inoculums 
 #100 in cats but not found in the inoculums (so all inoculum variants did transfer to cats)
 
+##what's the overall allele frequency distribution?
+hist(df2$frequency)
 
 #what types of variants?
 df %>%
@@ -175,8 +177,8 @@ P2_plot <- ggplot(df4) +
   geom_vline(aes(xintercept=21563))+
   geom_vline(aes(xintercept=25384))+
   scale_y_discrete(labels=c("P2",  
-                            "Cat 7"  , "Cat 8" ,  "Cat 9"  , "Cat 10",  
-                            "Cat 11" ,  "Cat 12")) +
+                            "Cat 7"  , "Cat 8" ,  "Cat 9"  , "Cat 10*",  
+                            "Cat 11*" ,  "Cat 12*")) +
   scale_color_manual(name="Variant effect",
                      labels=c("Frameshift",
                               "Inframe deletion",
@@ -195,9 +197,9 @@ P2_plot <- ggplot(df4) +
         panel.grid.minor = element_blank(),
         legend.title = element_text(size = 14), 
         legend.text  = element_text(size = 12),
-        legend.key.size = unit(0.8, "lines"),
-        plot.margin = margin(0.1,0.1,0.1,0.5,"cm"))
-  
+        legend.key.size = unit(0.8, "lines"))
+
+
 P3_plot <- ggplot(P3) +
     geom_point(data=(P3 %>%
                        filter(!is.na(frequency))),
@@ -219,12 +221,12 @@ P3_plot <- ggplot(P3) +
     geom_vline(aes(xintercept=21563))+
     geom_vline(aes(xintercept=25384))+
     scale_y_discrete(labels=c("P3",
-                              "Cat 1", "Cat 5" ,"Cat 6",
+                              "Cat 1", "Cat 5" ,"Cat 6*",
                               "Cat 13" , "Cat 14", "Cat 15" ,
                               "Cat 16" , "Cat 17", "Cat 18",
                               "Cat 19" , "Cat 20" , "Cat 21" ,
                               "Cat 22", "Cat 23",  "Cat 24"  ,
-                              "Cat 25" , "Cat 26"))+
+                              "Cat 25" , "Cat 26*"))+
     scale_color_manual(name="Variant effect", 
                        labels=c("Frameshift", 
                                 "Inframe deletion",
@@ -236,129 +238,17 @@ P3_plot <- ggplot(P3) +
     theme_bw()+
     labs(x="Position in genome (nt)") + 
     theme_classic()+
-    theme(axis.title.x = element_text(size=16, family="sans"),
+    theme(axis.title.x = element_text(size=16),
           legend.position="none",
           axis.title.y=element_blank(),
-          axis.text=element_text(size=14),
-          plot.margin = margin(0.1,0.1,0.1,0.5, "cm"))
-   
+          axis.text=element_text(size=14))
+
 P2_P3 <- ggarrange(P2_plot, P3_plot, ncol=1, heights = c(1,2.57), 
                    legend = "right", common.legend = TRUE, 
-                   labels="auto", hjust=-0.2)
+                   labels="auto", hjust=-0.2) +
+  theme(plot.margin = margin(1,0.5,0.5,2, "cm")) 
 
-pdf("cat_variants_effects_P2_P3.pdf", width=10, height=8)
+ragg::agg_tiff("fig2.tiff", width = 10, height = 8, 
+               units = "in", res = 500, compression = "lzw")
 P2_P3
 dev.off()
-
-###additional plot: focus on contact cats to see cat-to-cat variant transmission##################
-
-dfA <- df2 %>%
-  filter(dataset_ID %in% c("Cat_5", "Cat_6")) %>%
-  na.omit() %>%
-  mutate(dataset_ID = fct_recode(dataset_ID,
-                                 "Cat 5 " = "Cat_5",
-                                 "Cat 6 " ="Cat_6")) %>%
-  mutate(VOC = ifelse(variant %in% c("H69R", "F79L", "D138Y", 
-                                     "D215H", "D215N", "D215_L216insKLRS",
-                                     "E484D", "H655Y", "G204_209del",
-                                     "T205I"), "*", ""))
-
-dfB1 <- df2 %>%
-  filter(dataset_ID %in% c("Cat_7", "Cat_10")) %>%
-  na.omit() %>%
-  mutate(dataset_ID = fct_recode(dataset_ID,
-                                 "Cat 7" = "Cat_7",
-                                 "Cat 10" ="Cat_10")) %>%
-  mutate(dataset_ID = fct_relevel(dataset_ID, "Cat 7")) %>%
-  mutate(VOC = ifelse(variant %in% c("H69R", "F79L", "D138Y", 
-                                     "D215H", "D215N", "D215_L216insKLRS",
-                                     "E484D", "H655Y", "G204_209del",
-                                     "T205I"), "*", ""))
-
-dfB2 <- df2 %>%
-  filter(dataset_ID %in% c("Cat_7", "Cat_11")) %>%
-  na.omit() %>%
-  mutate(dataset_ID = fct_recode(dataset_ID,
-                                 "Cat 7" = "Cat_7",
-                                 "Cat 11" ="Cat_11")) %>%
-  mutate(dataset_ID = fct_relevel(dataset_ID, "Cat 7"))%>%
-  mutate(VOC = ifelse(variant %in% c("H69R", "F79L", "D138Y", 
-                                     "D215H", "D215N", "D215_L216insKLRS",
-                                     "E484D", "H655Y", "G204_209del",
-                                     "T205I"), "*", ""))
-
-dfB3 <- df2 %>%
-  filter(dataset_ID %in% c("Cat_7", "Cat_12")) %>%
-  na.omit() %>%
-  mutate(dataset_ID = fct_recode(dataset_ID,
-                                 "Cat 7" = "Cat_7",
-                                 "Cat 12" ="Cat_12")) %>%
-  mutate(dataset_ID = fct_relevel(dataset_ID, "Cat 7"))%>%
-  mutate(VOC = ifelse(variant %in% c("H69R", "F79L", "D138Y", 
-                                     "D215H", "D215N", "D215_L216insKLRS",
-                                     "E484D", "H655Y", "G204_209del",
-                                     "T205I"), "*", ""))
-
-dfC <- df2 %>%
-  filter(dataset_ID %in% c("Cat_22", "Cat_26")) %>%
-  na.omit() %>%
-  mutate(dataset_ID = fct_recode(dataset_ID,
-                                 "Cat 22" = "Cat_22",
-                                 "Cat 26" ="Cat_26")) %>%
-  mutate(VOC = ifelse(variant %in% c("H69R", "F79L", "D138Y", 
-                                     "D215H", "D215N", "D215_L216insKLRS",
-                                     "E484D", "H655Y", "G204_209del",
-                                     "T205I"), "*", ""))
-contact_plot <- function(df) {
-  ggplot(df) +
-    geom_rect(aes(xmin=21563, xmax=25384,
-                  ymin=-Inf,ymax=Inf), 
-              fill="whitesmoke")+
-    geom_point(data=(df %>%
-                       filter(!is.na(frequency))),
-               aes(y=dataset_ID, x=position, 
-                   col=frequency), 
-               size=2, shape=124,stroke=5)  +
-    geom_text(aes(x=position, y=dataset_ID,label=VOC),
-              hjust=0, vjust=0, size=5, color= "red") +
-    scale_color_gradient(high = "#132B43",low = "#56B1F7") +
-    scale_x_continuous(limits = c(0, 30000)) +
-    # scale_color_brewer(palette = "Paired") +
-    labs(col="Variant\nallele\nfrequency")+
-    theme_classic() +
-    theme(axis.title.y=element_blank(),
-          axis.text.x=element_text(size=10),
-          axis.text.y=element_text(size=12),
-          axis.title = element_blank(),
-          # legend.position = "none")
-          legend.text  = element_text(size = 10),
-          legend.title  = element_text(size = 12))
-}
-
-pA <- contact_plot(dfA)
-pB1 <- contact_plot(dfB1)
-pB2 <- contact_plot(dfB2)
-pB3 <- contact_plot(dfB3)
-pC <- contact_plot(dfC)
-
-p <- ggarrange(pA + rremove("x.text"), 
-               pB1 + rremove("x.text"), 
-               pB2 + rremove("x.text"), 
-               pB3 + rremove("x.text"), 
-               pC, 
-               common.legend=TRUE,
-               ncol=1,
-               nrow=5,
-               legend = "right")
-p <- annotate_figure(p, bottom="Variant position in genome (nt)")
-
-p
-
-pdf("cat_to_cat_variant_transmission_colored_by_AF_highlighted.pdf",
-    width=7, height=5) 
-p
-dev.off()
-
-##what's the overall allele frequency distribution?
-
-hist(df2$frequency)
