@@ -1,4 +1,4 @@
-# Data and code to support: Rapid evolution of SARS-CoV-2 in domestic cats
+## Data and code to support: *Rapid evolution of SARS-CoV-2 in domestic cats*
 ### Laura Bashor, Roderick B Gagne, Angela Bosco-Lauth, Mark Stenglein, and Sue VandeWoude
 
 Data and R code for processing, analyzing & visualizing results after running the [viral_variant_caller](https://github.com/stenglein-lab/viral_variant_caller) pipeline.
